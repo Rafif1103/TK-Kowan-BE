@@ -55,7 +55,7 @@ app.post('/convert', async (req, res) => {
 
 app.get('/history', async (req, res) => {
     try {
-        const query = `SELECT idr_value, usd_value, eur_value from currency_conversions`
+        const query = `SELECT idr_value, usd_value, eur_value, conversion_date from currency_conversions`
         const data = await pool.query(query)
         const dataRows = data.rows
 
