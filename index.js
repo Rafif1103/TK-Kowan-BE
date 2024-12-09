@@ -8,12 +8,7 @@ const pool = require("./db");
 const BASE_URL = "https://v6.exchangerate-api.com/v6/d728832c1528091949e3a1c3/latest/IDR";
 
 // middleware
-app.use(cors({
-    origin: ['*'],
-    credentials: true,
-    allowedHeaders: ['Content-Type', 'jwt_token', 'Authorization'],
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'] 
-  }));
+app.use(cors());
 
 app.use(express.json());
 
